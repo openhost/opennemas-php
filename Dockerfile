@@ -49,6 +49,4 @@ RUN apk --no-cache add \
 VOLUME ["/app"]
 WORKDIR /app
 
-ONBUILD RUN composer install
-
 ENTRYPOINT ["/app/bin/phpunit"]
