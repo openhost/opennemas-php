@@ -1,5 +1,5 @@
 # PHPUnit Docker Container.
-FROM alpine:3.8
+FROM alpine:3.11
 LABEL mantainer="Opennemas Developers Team <developers@opennemas.com>"
 
 WORKDIR /tmp
@@ -48,5 +48,3 @@ RUN apk --no-cache add \
 
 VOLUME ["/app"]
 WORKDIR /app
-
-ENTRYPOINT ["/app/bin/phpunit"]
