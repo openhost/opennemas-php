@@ -6,6 +6,7 @@ WORKDIR /tmp
 
 RUN apk --no-cache add \
         bash \
+        openssh-client \
         ca-certificates \
         curl \
         git \
