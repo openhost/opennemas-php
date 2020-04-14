@@ -48,5 +48,7 @@ RUN apk --no-cache add \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
     && php -r "unlink('composer-setup.php');"
 
+RUN echo "zend_extension=xdebug.so" >> /etc/php7/conf.d/xdebug.ini
+
 VOLUME ["/app"]
 WORKDIR /app
