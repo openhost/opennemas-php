@@ -11,6 +11,8 @@ RUN apk --no-cache add \
         curl \
         git \
         make \
+        nodejs \
+        npm \
         php7 \
         php7-bcmath \
         php7-ctype \
