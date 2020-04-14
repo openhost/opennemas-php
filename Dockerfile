@@ -10,6 +10,7 @@ RUN apk --no-cache add \
         ca-certificates \
         curl \
         git \
+        make \
         php7 \
         php7-bcmath \
         php7-ctype \
