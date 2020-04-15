@@ -11,8 +11,6 @@ RUN apk --no-cache add \
         curl \
         git \
         make \
-        nodejs \
-        npm \
         php7 \
         php7-bcmath \
         php7-ctype \
@@ -50,6 +48,8 @@ RUN apk --no-cache add \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
     && php -r "unlink('composer-setup.php');"
+
+RUN apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.8/main/ nodejs=8.14.0-r0
 
 RUN echo "zend_extension=xdebug.so" >> /etc/php7/conf.d/xdebug.ini
 
