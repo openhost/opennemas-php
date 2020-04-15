@@ -9,6 +9,7 @@ RUN apk --no-cache add \
         openssh-client \
         ca-certificates \
         curl \
+        gettext \
         git \
         make \
         php7 \
