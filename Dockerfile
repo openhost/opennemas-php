@@ -50,6 +50,7 @@ RUN apk --no-cache add \
         ruby \
         ruby-etc \
         ruby-dev \
+        tar \
         unzip \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
