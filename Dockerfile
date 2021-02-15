@@ -9,9 +9,11 @@ RUN apk --no-cache add \
         openssh-client \
         ca-certificates \
         curl \
+        gcc \
         gettext \
         git \
         make \
+        libc-dev \
         php7 \
         php7-bcmath \
         php7-ctype \
@@ -45,6 +47,8 @@ RUN apk --no-cache add \
         php7-xmlwriter \
         php7-zip \
         php7-zlib \
+        ruby \
+        ruby-dev \
         unzip \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/bin --filename=composer \
@@ -52,6 +56,8 @@ RUN apk --no-cache add \
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.8/main/ nodejs=8.14.0-r0 \
         --repository http://dl-cdn.alpinelinux.org/alpine/v3.8/main/ npm=8.14.0-r0
+
+RUN gem install fpm
 
 RUN echo "zend_extension=xdebug.so" >> /etc/php7/conf.d/xdebug.ini
 
