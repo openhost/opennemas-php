@@ -48,6 +48,7 @@ RUN apk --no-cache add \
         php7-zip \
         php7-zlib \
         ruby \
+        ruby-etc \
         ruby-dev \
         unzip \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
